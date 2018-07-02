@@ -4,7 +4,11 @@ add fasthttp
 
 TODO: 
 
-add hyperscan
+add hyperscan single scratch && mutex lock 
+
+add go routine pool
+
+add every arg is a scratch
 
 support multi args 
 
