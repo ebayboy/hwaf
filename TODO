@@ -1,8 +1,12 @@
 
-1. support fasthttp
-2. support multi go routine with scratch 
-3. analyse http request
+support fasthttp
 
+support multi go routine with scratch 
 
-4. add user rule
-5. add cc flood defend 
+analyse http request
+
+add user rule
+
+add cc flood defend 
+
+suport unix domain docke listen.
