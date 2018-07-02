@@ -201,20 +201,18 @@ func requestHandler(ctx *fasthttp.RequestCtx) {
 
 	inputData := []byte(ctx.RequestURI())
 
-	fmt.Fprintf(ctx, "inputData %q\n\n", inputData)
-
-	fmt.Fprintf(ctx, "Hello, world!\n\n")
-	fmt.Fprintf(ctx, "Request method is %q\n", ctx.Method())
-	fmt.Fprintf(ctx, "RequestURI is %q\n", ctx.RequestURI())
-	fmt.Fprintf(ctx, "Requested path is %q\n", ctx.Path())
-	fmt.Fprintf(ctx, "Host is %q\n", ctx.Host())
-	fmt.Fprintf(ctx, "Query string is %q\n", ctx.QueryArgs())
-	fmt.Fprintf(ctx, "User-Agent is %q\n", ctx.UserAgent())
-	fmt.Fprintf(ctx, "Connection has been established at %s\n", ctx.ConnTime())
-	fmt.Fprintf(ctx, "Request has been started at %s\n", ctx.Time())
-	fmt.Fprintf(ctx, "Serial request number for the current connection is %d\n", ctx.ConnRequestNum())
-	fmt.Fprintf(ctx, "Your ip is %q\n\n", ctx.RemoteIP())
-	fmt.Fprintf(ctx, "Raw request is:\n---CUT---\n%s\n---CUT---\n", &ctx.Request)
+	log.Info(fmt.Sprintf("\ninputData %q", inputData))
+	log.Info(fmt.Sprintf("Request method is %q", ctx.Method()))
+	log.Info(fmt.Sprintf("RequestURI is %q", ctx.RequestURI()))
+	log.Info(fmt.Sprintf("Requested path is %q", ctx.Path()))
+	log.Info(fmt.Sprintf("Host is %q", ctx.Host()))
+	log.Info(fmt.Sprintf("Query string is %q", ctx.QueryArgs()))
+	log.Info(fmt.Sprintf("User-Agent is %q", ctx.UserAgent()))
+	log.Info(fmt.Sprintf("Connection has been established at %s", ctx.ConnTime()))
+	log.Info(fmt.Sprintf("Request has been started at %s", ctx.Time()))
+	log.Info(fmt.Sprintf("Serial request number for the current connection is %d", ctx.ConnRequestNum()))
+	log.Info(fmt.Sprintf("Clent ip is %q", ctx.RemoteIP()))
+	log.Info(fmt.Sprintf("Raw request is:\n---CUT---\n%s\n---CUT---\n", &ctx.Request))
 
 	// results
 	var matchResps []MatchResp
