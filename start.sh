@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./hwaf --filepath=patterns/args
+./hwaf --filepath=patterns/uri
