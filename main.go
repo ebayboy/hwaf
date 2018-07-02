@@ -140,29 +140,39 @@ func buildScratch(filepath string) (err error) {
 
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
+
 		log.Debug(scanner.Text())
 		line := scanner.Text()
+
 		// line start with #, skip
 		if strings.HasPrefix(strings.TrimSpace(line), "#") {
 			log.Info(fmt.Sprintf("line start with #, skip line: %s", line))
 			continue
 		}
 		s := strings.Split(line, "\t")
+
 		// length less than 3, skip
 		if len(s) < 3 {
 			log.Info(fmt.Sprintf("line length less than 3, skip line: %s", line))
 			continue
 		}
+
+		/* id */
 		id, err = strconv.Atoi(s[0])
 		if err != nil {
 			return fmt.Errorf("Atoi error.")
 		}
+
+		/* regex */
 		expr = hyperscan.Expression(s[1])
+
+		/* data */
 		data := s[2]
 		pattern := &hyperscan.Pattern{Expression: expr, Flags: flags, Id: id}
 		patterns = append(patterns, pattern)
 		RegexMap[id] = RegexLine{string(expr), data}
 	}
+
 	if len(patterns) <= 0 {
 		return fmt.Errorf("Empty regex")
 	}
