@@ -153,7 +153,7 @@ func buildScratch(filepath string) (err error) {
 
 		// length less than 3, skip
 		if len(s) < 3 {
-			log.Info(fmt.Sprintf("line length less than 3, skip line: %s", line))
+			log.Info(fmt.Sprintf("line length less than 3, skip line: [%s] len(s):[%d]", line, len(s)))
 			continue
 		}
 
