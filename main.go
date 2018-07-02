@@ -36,12 +36,14 @@ var (
 	RegexMap map[int]RegexLine
 )
 
+/* not match resp */
 type Response struct {
 	Errno int         `json:errno`
 	Msg   string      `json:msg`
 	Data  interface{} `json:data`
 }
 
+/* match resp */
 type MatchResp struct {
 	Id         int       `json:id`
 	From       int       `json:from`
