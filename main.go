@@ -4,10 +4,10 @@ import (
 	"bufio"
 	"encoding/json"
 	"fmt"
-	log "github.com/Sirupsen/logrus"
-	"github.com/flier/gohs/hyperscan"
-	"github.com/spf13/cobra"
-	"github.com/spf13/viper"
+	log "github.com/Sirupsen/logrus"  /* structured logger lib */
+	"github.com/flier/gohs/hyperscan" /* Hyperscan lib */
+	"github.com/spf13/cobra"          /* CLI lib */
+	"github.com/spf13/viper"          /* Configuration lib */
 	"io"
 	"net"
 	"net/http"
