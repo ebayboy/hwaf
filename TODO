@@ -1,0 +1,8 @@
+
+1. support fasthttp
+2. support multi go routine with scratch 
+3. analyse http request
+
+
+4. add user rule
+5. add cc flood defend 

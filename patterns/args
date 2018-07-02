@@ -1,1 +1,2 @@
 1	^passwd$	{"type":"name", "user":"you"}
+1	^etc$	{"type":"name", "user":"you"}
