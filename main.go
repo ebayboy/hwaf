@@ -8,7 +8,7 @@ import (
 	"github.com/flier/gohs/hyperscan" /* Hyperscan lib */
 	"github.com/spf13/cobra"          /* CLI lib */
 	"github.com/spf13/viper"          /* Configuration lib */
-	"github.com/valyala/fasthttp"
+	"github.com/valyala/fasthttp"     /* http parse lib */
 	"io"
 	"net"
 	"net/http"
